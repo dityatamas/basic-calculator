@@ -1,0 +1,60 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Goldman', cursive;
+  font-weight: normal;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top left, #f38181, #fce38a);
+}
+
+.container{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.container > button{
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 100%;
+  border: 2px solid white;
+  outline: none;
+  background-color: #eaffd0;
+  margin: 5px;
+}
+
+.container > button:hover{
+  background-color: #f6f7d4;
+}
+
+.output{
+  grid-column: 1 / -1;
+  background: white;
+  border-radius: 25px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 18px;
+  margin-bottom: 10px;
+
+  /* Membuat tulisan pada hasil apabila terlalu panjang akan ditersukan dibawahnya */
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .history{
+  color: #52616b;
+  font-size: 1.5rem;
+}
+
+.output .result{
+  color: #1e2022;
+  font-size: 2.5rem;
+}
